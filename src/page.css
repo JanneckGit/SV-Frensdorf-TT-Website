@@ -1,0 +1,68 @@
+/* Rahmen der eigenständigen Seite – angelehnt an svfrensdorf.de
+   (dunkler Kopf/Fuß, hellgraue Titelleiste). Keine externen Schriften. */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body.svf-page {
+  margin: 0;
+  background: #fff;
+  color: #4d4d4d;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.svf-wrap { width: 100%; max-width: 1202px; margin: 0 auto; padding: 0 16px; }
+.svf-top { background: #333; color: #fff; }
+.svf-top__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; }
+.svf-brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: #fff; text-decoration: none; }
+.svf-brand__shield { width: 34px; height: 38px; flex: none; }
+.svf-brand__text {
+  font-family: "Roboto Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.svf-brand__year { color: #ffd800; }
+.svf-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #6cc4ff;
+  font-size: 15px;
+  text-decoration: none;
+}
+.svf-back:hover, .svf-back:focus-visible { color: #fff; text-decoration: underline; }
+.svf-titlebar { background: #e4e4e4; }
+.svf-titlebar__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding-top: 26px; padding-bottom: 26px; }
+.svf-titlebar__title {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #37251b;
+}
+.svf-crumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; color: #555; }
+.svf-crumbs a { color: #555; text-decoration: none; }
+.svf-crumbs a:hover, .svf-crumbs a:focus-visible { color: #0055a6; text-decoration: underline; }
+.svf-main { padding-top: 48px; padding-bottom: 72px; }
+.svf-foot { background: #333; color: #fff; }
+.svf-foot__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-top: 32px; padding-bottom: 32px; }
+.svf-foot__name {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.svf-foot__links { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 14px; }
+.svf-foot__links a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; text-decoration: none; }
+.svf-foot__links a:hover, .svf-foot__links a:focus-visible { text-decoration: underline; }
+.svf-page a:focus-visible { outline: 3px solid #0da1ff; outline-offset: 3px; }
+.svf-back { white-space: nowrap; }
+@media (max-width: 640px) {
+  .svf-top__inner { min-height: 64px; }
+  .svf-brand__text { font-size: 18px; }
+  .svf-brand__year { display: none; }
+  .svf-titlebar__title { font-size: 32px; }
+  .svf-titlebar__inner { padding-top: 20px; padding-bottom: 20px; }
+  .svf-main { padding-top: 24px; padding-bottom: 48px; }
+}
